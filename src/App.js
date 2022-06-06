@@ -54,7 +54,7 @@ const App = () => {
         <InstantSearch searchClient={searchClient} indexName="data_final">
           <HitsPerPage style={{display: "none"}}
             items={[
-              {value: 500, default: true }
+              {value: 10, default: true }
             ]}
           />
           <SearchBox className='searchBox' />
