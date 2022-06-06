@@ -1,0 +1,49 @@
+body {
+    /* overflow: hidden; */
+    margin: 0;
+}
+.searchBox {
+    width: 50%;
+    margin: 2% 5%;
+    position: fixed;
+    z-index: 1;
+}
+/* .mapboxgl-control-container {
+    display: none;
+} */
+.markers {
+    overflow: hidden;
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow:  1px 1px 2px #ffffff,
+             -1px -1px 2px #b0b0b0;
+    height: 50px;
+    width: max-content;
+    display: flex;
+    padding: 3%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.markers > img {
+    border-radius: 50%;
+    height: 90%;
+}
+
+.details {
+    padding: 5px 10px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.details > p {
+    height: 50%;
+    margin: 0;
+}
+
+.details > h3 {
+    height: 50%;
+    font-size: 15px;
+    margin: 0;
+}
