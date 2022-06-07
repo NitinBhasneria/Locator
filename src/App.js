@@ -42,7 +42,7 @@ const App = () => {
           zoom: 1.5
         }}
         style={{width: "100%", height: "100vh"}}
-        mapStyle="mapbox://styles/mapbox/streets-v9"
+        mapStyle="mapbox://styles/mapbox/light-v10"
         mapboxAccessToken={TOKEN}
       >
 
