@@ -2,8 +2,10 @@ import Map, { Marker, NavigationControl, FullscreenControl, ScaleControl} from '
 import "./App.css"
 import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch, HitsPerPage, SearchBox, Highlight, Hits, useHits } from 'react-instantsearch-hooks-web';
+import mapboxgl, {MapboxWorker} from 'mapbox-gl';
 
-const TOKEN = 'pk.eyJ1Ijoibml0aW5iaGFzbmVyaWEiLCJhIjoiY2w0MWI0dmVhNDY0YjNjb2V6NzhmMXhtbiJ9.xQksCpwX-W60H3CLxjDV4g';
+mapboxgl.workerClass = MapboxWorker;
+mapboxgl.accessToken = 'pk.eyJ1Ijoibml0aW5iaGFzbmVyaWEiLCJhIjoiY2w0MWI0dmVhNDY0YjNjb2V6NzhmMXhtbiJ9.xQksCpwX-W60H3CLxjDV4g';
 const searchClient = algoliasearch('LZMOMS4LVO', '04d988bde0d9187363c1043baf76316d');
 
 const App = () => {
@@ -43,7 +45,7 @@ const App = () => {
         }}
         style={{width: "100%", height: "100vh"}}
         mapStyle="mapbox://styles/mapbox/light-v10"
-        mapboxAccessToken={TOKEN}
+        mapboxAccessToken={mapboxgl.accessToken}
       >
 
         <FullscreenControl position="bottom-right" />
