@@ -2,9 +2,10 @@ import Map, { Marker, NavigationControl, FullscreenControl, ScaleControl} from '
 import "./App.css"
 import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch, HitsPerPage, SearchBox, Highlight, Hits, useHits } from 'react-instantsearch-hooks-web';
-import mapboxgl, {MapboxWorker} from 'mapbox-gl';
+import mapboxgl from 'mapbox-gl';
 
-mapboxgl.workerClass = MapboxWorker;
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 mapboxgl.accessToken = 'pk.eyJ1Ijoibml0aW5iaGFzbmVyaWEiLCJhIjoiY2w0MWI0dmVhNDY0YjNjb2V6NzhmMXhtbiJ9.xQksCpwX-W60H3CLxjDV4g';
 const searchClient = algoliasearch('LZMOMS4LVO', '04d988bde0d9187363c1043baf76316d');
 
